@@ -3,6 +3,6 @@
 
 
 - Git/Github
-- HTML
+- HTML/CSS
 - JS
 - PHP
