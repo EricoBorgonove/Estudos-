@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+	*{
+		margin: 0;
+		padding: 0;
+	}
+
+	body{
+		background-color: #ddd;
+		font-family: 'Roboto Condensed';
+	}
+
+	.nav_tabs{
+		width: 600px;
+		height: 400px;
+		margin: 100px auto;
+		background-color: #fff;
+		position: relative;
+	}
+
+	.nav_tabs ul{
+		list-style: none;
+	}
+
+	.nav_tabs ul li{
+		float: left;
+	}
+
+	.tab_label{
+		display: block;
+		width: 100px;
+		background-color: #363b48;
+		padding: 25px;
+		font-size: 20px;
+		color:#fff;
+		cursor: pointer;
+		text-align: center;
+	}
+
+
+	.nav_tabs .rd_tab { 
+	display:none;
+	position: absolute;
+}
+
+.nav_tabs .rd_tab:checked ~ label { 
+	background-color: #e54e43;
+	color:#fff;}
+
+.tab-content{
+	border-top: solid 5px #e54e43;
+	background-color: #fff;
+	display: none;
+	position: absolute;
+	height: 320px;
+	width: 600px;
+	left: 0;	
+}
+
+.rd_tab:checked ~ .tab-content{
+	display: block;
+}
+.tab-content h2{
+	padding: 10px;
+	color: #87d3b7;
+}
+.tab-content article{
+	padding: 10px;
+	color: #555;
+}
+</style>
+<body>
+    
+    <nav class="nav_tabs">
+        <ul>
+            <li>
+                <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
+                <label for="tab1" class="tab_label">Tab 1</label>
+                <div class="tab-content">
+                    <h2>Title 1</h2>
+                    <article>
+                        1
+                    </article>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tab" id="tab2">
+                <label for="tab2" class="tab_label">Tab 2</label>
+                <div class="tab-content">
+                    <h2>Title 2</h2>
+                    <article>
+                     2
+                    </article>
+                </div>
+        </ul>
+    </nav>
+</body>
+</html>
